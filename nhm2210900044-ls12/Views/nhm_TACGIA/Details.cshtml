@@ -1,0 +1,27 @@
+﻿@model WebApplication1.Models.nhm_TACGIA
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_nhm2210900044Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>nhm_TACGIA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nhm_TenTacGia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nhm_TenTacGia)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.nhm_MaTG }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

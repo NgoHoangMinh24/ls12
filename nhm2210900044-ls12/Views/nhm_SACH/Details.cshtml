@@ -1,0 +1,59 @@
+﻿@model WebApplication1.Models.nhm_SACH
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_nhm2210900044Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>nhm_SACH</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nhm_TenSach)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nhm_TenSach)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nhm_SoTrang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nhm_SoTrang)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nhm_NamXB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nhm_NamXB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nhm_TrangThai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nhm_TrangThai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nhm_TACGIA.nhm_TenTacGia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nhm_TACGIA.nhm_TenTacGia)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.nhm_MaSach }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

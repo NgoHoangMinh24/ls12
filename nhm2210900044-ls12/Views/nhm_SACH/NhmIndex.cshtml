@@ -1,0 +1,59 @@
+﻿@model IEnumerable<WebApplication1.Models.nhm_SACH>
+
+@{
+    ViewBag.Title = "Books";
+    Layout = "~/Views/Shared/_nhm2210900044Layout.cshtml";
+}
+
+<h2>Books</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", "nhm_SACH", null, new { @class = "btn btn-primary my-3" })
+</p>
+
+<table class="table table-bordered">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nhm_TenSach)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nhm_SoTrang)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nhm_NamXB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nhm_TrangThai)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nhm_TACGIA.nhm_TenTacGia)
+        </th>
+        <th>Actions</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nhm_TenSach)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nhm_SoTrang)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nhm_NamXB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nhm_TrangThai)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nhm_TACGIA.nhm_TenTacGia)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.nhm_MaSach }) |
+                @Html.ActionLink("Details", "Details", new { id = item.nhm_MaSach }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.nhm_MaSach })
+            </td>
+        </tr>
+    }
+</table>

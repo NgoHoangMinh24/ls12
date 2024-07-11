@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ngohoangminh_2210900044ModelStoreContainer" CdmEntityContainer="ngohoangminh_2210900044Entities">
+    <EntitySetMapping Name="nhm_SACH">
+      <EntityTypeMapping TypeName="ngohoangminh_2210900044Model.nhm_SACH">
+        <MappingFragment StoreEntitySet="nhm_SACH">
+          <ScalarProperty Name="nhm_MaSach" ColumnName="nhm_MaSach" />
+          <ScalarProperty Name="nhm_TenSach" ColumnName="nhm_TenSach" />
+          <ScalarProperty Name="nhm_SoTrang" ColumnName="nhm_SoTrang" />
+          <ScalarProperty Name="nhm_NamXB" ColumnName="nhm_NamXB" />
+          <ScalarProperty Name="nhm_MaTG" ColumnName="nhm_MaTG" />
+          <ScalarProperty Name="nhm_TrangThai" ColumnName="nhm_TrangThai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="nhm_TACGIA">
+      <EntityTypeMapping TypeName="ngohoangminh_2210900044Model.nhm_TACGIA">
+        <MappingFragment StoreEntitySet="nhm_TACGIA">
+          <ScalarProperty Name="nhm_MaTG" ColumnName="nhm_MaTG" />
+          <ScalarProperty Name="nhm_TenTacGia" ColumnName="nhm_TenTacGia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

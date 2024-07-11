@@ -1,0 +1,42 @@
+﻿@model IEnumerable<WebApplication1.Models.nhm_TACGIA>
+
+@{
+    ViewBag.Title = "Authors";
+    Layout = "~/Views/Shared/_nhm2210900044Layout.cshtml";
+}
+
+<h2>Authors</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", new { @class = "btn btn-primary my-3" })
+</p>
+
+<table class="table table-bordered">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nhm_TenTacGia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nhm_MaTG)
+        </th>
+        <th>Actions</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.nhm_MaTG)
+    </td>
+
+    <td>
+        @Html.DisplayFor(modelItem => item.nhm_TenTacGia)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.nhm_MaTG }) |
+        @Html.ActionLink("Details", "Details", new { id = item.nhm_MaTG }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.nhm_MaTG })
+    </td>
+</tr>
+    }
+</table>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ngohoangminh_2210900044Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="nhm_SACH">
+    <Key>
+      <PropertyRef Name="nhm_MaSach" />
+    </Key>
+    <Property Name="nhm_MaSach" Type="int" Nullable="false" />
+    <Property Name="nhm_TenSach" Type="nvarchar" MaxLength="255" />
+    <Property Name="nhm_SoTrang" Type="int" />
+    <Property Name="nhm_NamXB" Type="int" />
+    <Property Name="nhm_MaTG" Type="int" />
+    <Property Name="nhm_TrangThai" Type="bit" />
+  </EntityType>
+  <EntityType Name="nhm_TACGIA">
+    <Key>
+      <PropertyRef Name="nhm_MaTG" />
+    </Key>
+    <Property Name="nhm_MaTG" Type="int" Nullable="false" />
+    <Property Name="nhm_TenTacGia" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <Association Name="FK__nhm_SACH__nhm_Ma__398D8EEE">
+    <End Role="nhm_TACGIA" Type="Self.nhm_TACGIA" Multiplicity="0..1" />
+    <End Role="nhm_SACH" Type="Self.nhm_SACH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="nhm_TACGIA">
+        <PropertyRef Name="nhm_MaTG" />
+      </Principal>
+      <Dependent Role="nhm_SACH">
+        <PropertyRef Name="nhm_MaTG" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ngohoangminh_2210900044ModelStoreContainer">
+    <EntitySet Name="nhm_SACH" EntityType="Self.nhm_SACH" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="nhm_TACGIA" EntityType="Self.nhm_TACGIA" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__nhm_SACH__nhm_Ma__398D8EEE" Association="Self.FK__nhm_SACH__nhm_Ma__398D8EEE">
+      <End Role="nhm_TACGIA" EntitySet="nhm_TACGIA" />
+      <End Role="nhm_SACH" EntitySet="nhm_SACH" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
